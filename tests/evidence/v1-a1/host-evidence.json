@@ -1,0 +1,155 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-02",
+  "baseline_commit": "2360b96d6ae8933babe21e5329334c8c6c7a62bd",
+  "host": {
+    "kind": "native Codex app-server over stdio",
+    "cli_version": "0.153.4",
+    "desktop_gui_picker_tested": false,
+    "installed_new_dependencies": false,
+    "global_skill_installation_modified": false
+  },
+  "discovery": [
+    {
+      "cwd": "repo_root",
+      "skill_count": 53,
+      "parser_error_count": 0,
+      "matches": [
+        {
+          "name": "hr-clipping",
+          "path": ".agents/skills/hr-clipping/SKILL.md",
+          "enabled": true,
+          "scope": "repo"
+        }
+      ]
+    },
+    {
+      "cwd": "parent_workspace",
+      "skill_count": 52,
+      "parser_error_count": 0,
+      "matches": []
+    }
+  ],
+  "sessions": {
+    "explicit": {
+      "thread_id": "01a19c70-3f45-76d3-820f-b645cae1ccac",
+      "turn_id": "01a19c70-5bb5-7bc1-be3a-488fe6ba1bd4",
+      "status": "completed",
+      "error": null,
+      "input": [
+        {
+          "type": "skill",
+          "name": "hr-clipping",
+          "path": ".agents/skills/hr-clipping/SKILL.md"
+        },
+        {
+          "type": "text",
+          "text": "使用 $hr-clipping。主题：我想测试一次真实软件操作怎样讲清楚；素材未拍，本次只给20～30秒的拍摄与剪辑计划，特别要求无。请沿用固定风格，具体说明画面结构、配色、字幕和人物小窗处理，并区分计划与已经验证的结果。\n这是只读验证：不要修改任何文件，不剪辑、不渲染、不上传、不安装、不创建其他代理，不读取本仓库 local/、tests/ 或 docs/ 下的测试答案/证据。请按宿主正式提供的技能处理；若宿主没有提供该技能就明确说未加载，不用搜索目录或靠猜测补全。请在末尾列出本轮实际读取的仓库相对文件及未完成检查。"
+        }
+      ],
+      "native_injections": [
+        {
+          "ordinal": 8,
+          "timestamp": "2026-11-02T13:26:26.516Z",
+          "role": "user",
+          "wrapper": "<skill><name>hr-clipping</name><path>[discovered repo path]</path>...</skill>",
+          "body_matches_baseline_skill": true,
+          "raw_wrapper_sha256": "46511bc83413fec5fcad5c596d5a60468f54445af42a4d22e025a431e0eebb26"
+        }
+      ],
+      "command_executions": [
+        {
+          "id": "exec-e0434cf8-0dec-459c-8ca3-2ffe2f7532ad",
+          "exit_code": 0,
+          "status": "completed",
+          "action_commands": [
+            "Get-Content -LiteralPath '.agents\\skills\\hr-clipping\\SKILL.md' -Raw; Write-Output \"`n--- production-baseline-v1.md ---\"; Get-Content -LiteralPath '.agents\\skills\\hr-clipping\\references\\production-baseline-v1.md' -Raw; Write-Output \"`n--- episode-brief.md ---\"; Get-Content -LiteralPath '.agents\\skills\\hr-clipping\\templates\\episode-brief.md' -Raw"
+          ],
+          "output_contains_skill": true,
+          "output_contains_baseline": true,
+          "output_contains_episode_brief": true,
+          "raw_output_sha256": "9a8bb35298472cda50657d1022ef9a4c13f0d0bbb02de82e238d83c5bc0404b7"
+        }
+      ],
+      "final_response_file": "explicit-response.md",
+      "raw_final_response_sha256": "e7443da7d18b70f08215d0c9361410ac6e60e8a084329a7b953bcd7fc81d0ad6"
+    },
+    "negative": {
+      "thread_id": "01a19c70-472a-7ca1-a28c-7af5b28ca9f5",
+      "turn_id": "01a19c70-5b58-7b70-8a24-1196e100942d",
+      "status": "completed",
+      "error": null,
+      "input": [
+        {
+          "type": "text",
+          "text": "帮我排查 App 中 React 列表 key 重复的问题，和视频制作无关。请给排查步骤；我还没提供源代码，不要猜具体根因。\n只读作答，不修改文件，不创建其他代理，不读取 local/、tests/ 或 docs/ 下测试证据。末尾列实际读取的仓库相对文件。"
+        }
+      ],
+      "native_injections": [],
+      "command_executions": [],
+      "final_response_file": "negative-response.md",
+      "raw_final_response_sha256": "3d8b627da54387bd39208cec8fc7f64d4096e356e103ba38f642ba4c6c61742d"
+    }
+  },
+  "manual_read": {
+    "status": "PASS",
+    "kind": "executor repository inspection only",
+    "counts_as_host_discovery": false
+  },
+  "sample": {
+    "status": "NOT_RUN",
+    "reason": "No audio/video files in the authorized SKILLS workspace",
+    "authorized_files_checked": 33,
+    "audio_video_files": 0,
+    "third_party_reference_stills": 3,
+    "scan_followed_links": false,
+    "other_projects_scanned": false
+  },
+  "assessment": {
+    "discovery_repo_root": "PASS",
+    "discovery_parent_workspace": "FAIL (outside repository search scope; expected limitation)",
+    "formal_structured_invocation": "PASS",
+    "native_skill_injection": "PASS",
+    "baseline_read_in_formal_call": "PASS",
+    "style_inheritance_in_text_plan": "PASS",
+    "ordinary_code_negative_route": "PASS",
+    "manual_file_read": "PASS (separate evidence only)",
+    "desktop_gui_menu": "NOT_RUN",
+    "actual_sample_and_media_checks": "NOT_RUN",
+    "cross_workspace_portable_install": "NOT_RUN",
+    "literal_dollar_text_only": "BLOCKED (host initialization/transport; no model turn)"
+  },
+  "supplementary_literal_dollar_probe": {
+    "status": "BLOCKED",
+    "model_turn_started": false,
+    "skill_input_supplied": false,
+    "prompt_same_as_explicit": true,
+    "attempts": [
+      {
+        "transport": "new app-server stdio",
+        "stage": "before initialize response",
+        "error": "failed to initialize SQLite state runtime at [Codex home]",
+        "stderr_sha256": "8a47ea13456a89e83b7355d9de042bed1bfb91b8642b1ad5ca1891b378effbf7"
+      },
+      {
+        "transport": "existing app-server proxy (one bounded retry)",
+        "stage": "before initialize response",
+        "error": "failed to connect to local control socket; os error 10050 (dead network)",
+        "stderr_sha256": "a086cc7042fa1a0213c75975fd60bc8f110224a19b087047997dd060e8d3ad43"
+      }
+    ],
+    "global_database_or_network_modified": false,
+    "skill_parsing_failed": false
+  },
+  "evidence_review": {
+    "type": "separate Codex subagent, read-only raw evidence review",
+    "formal_native_results_supported": true,
+    "counts_as_chatgpt_independent_acceptance": false,
+    "native_injection_rollout_line": 9,
+    "native_injection_rollout_ordinal": 8,
+    "explicit_read_call_rollout_line": 14,
+    "explicit_read_return_rollout_line": 17,
+    "explicit_final_response_rollout_line": 32,
+    "negative_injections": 0
+  }
+}

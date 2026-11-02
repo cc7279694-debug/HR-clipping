@@ -26,6 +26,11 @@ REQUIRED_FILES = (
     "tests/evidence/negative-route-response.md",
     "tests/evidence/behavior-assessment.md",
     "tests/evidence/verification-log.md",
+    "docs/V1_A1_REPORT.md",
+    "docs/V1_A1_SAMPLE_PREPARATION.md",
+    "tests/evidence/v1-a1/host-evidence.json",
+    "tests/evidence/v1-a1/explicit-response.md",
+    "tests/evidence/v1-a1/negative-response.md",
 )
 FIELDS = {
     "templates/episode-brief.md": ("本期主题", "素材位置", "本次任务", "特别要求", "事实表"),
