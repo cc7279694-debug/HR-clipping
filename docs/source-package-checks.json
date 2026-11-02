@@ -1,0 +1,27 @@
+{
+  "kind": "static_package_validation_only",
+  "checks": {
+    "frontmatter": "PASS",
+    "local_links": "PASS (6 references)",
+    "utf8_text": "PASS",
+    "source_manifest_json": "PASS",
+    "no_bundled_third_party_media_or_fonts": "PASS",
+    "agent_behavior_evaluation": "NOT_RUN",
+    "local_codex_installation": "NOT_RUN",
+    "editor_execution_and_render": "NOT_RUN",
+    "reference_full_audio_listening": "NOT_RUN",
+    "hr_clipping_rename_static_validation": "PASS (local package structure; no runtime skill recognition)"
+  },
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "examples/openfilm-episode.md",
+    "references/production-baseline-v1.md",
+    "references/reference-analysis.md",
+    "references/source-identities.json",
+    "references/validation.md",
+    "templates/edit-plan.md",
+    "templates/episode-brief.md",
+    "templates/review.md"
+  ]
+}
