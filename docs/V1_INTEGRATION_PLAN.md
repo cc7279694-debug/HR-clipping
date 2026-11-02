@@ -23,7 +23,7 @@
 - [x] 实现标准库结构校验；负向用例先验证缺失校验器失败，再补实现。
 - [x] 新独立代理实际读取并作答，对 B1–B8 评分；B3 隔离检查误触发。
 - [x] 复查实际文件、引用、证据和安全；按证据更新报告，不升级 NOT_RUN。
-- [ ] 逐项暂存；检查 diff；Conventional Commit；推送当前功能分支；核对远端 SHA。
+- [x] 逐项暂存；检查 diff；Conventional Commit；推送当前功能分支；核对远端 SHA。功能提交与推送证据见[验证回执](../tests/evidence/verification-log.md)，最终交付快照由交付答复固定链接指定。
 
 ## 文件职责
 

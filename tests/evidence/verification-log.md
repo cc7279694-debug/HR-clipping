@@ -56,3 +56,24 @@ Skill is valid!
 执行方对全部 25 份文本做 UTF-8/JSON、媒体类型及敏感内容检查，未发现私人绝对路径、邮箱、凭据或原始媒体；8 份用户原附件 SHA-256 均未变化。`.gitignore` 的原片、输出、参考图、环境文件和本地简报路径均命中忽略规则。提交时仍需对实际暂存内容及生成提交再检查。
 
 实际暂存后的空白检查发现原包带来的五处 Markdown 双空格换行；已改为段落换行，保持内容含义，重新检查暂存 diff。
+
+## Git 功能交付回执
+
+逐项暂存 25 份已确认文件；暂存 UTF-8/JSON/媒体类型/敏感内容检查通过，`git diff --cached --check` 退出 0；功能提交树再次检查通过。
+
+```text
+git commit -m "feat(skills): integrate hr-clipping vlog v1"
+exit 0
+099a4a482c0a012afeaba01ee372d8ba7277fc18
+
+git push --set-upstream origin codex/xiaoyang-vlog-v1
+exit 0
+new branch -> codex/xiaoyang-vlog-v1
+
+git ls-remote origin refs/heads/codex/xiaoyang-vlog-v1 refs/heads/main
+exit 0
+099a4a482c0a012afeaba01ee372d8ba7277fc18 refs/heads/codex/xiaoyang-vlog-v1
+a633ebc3fd6409c71d5fccd65ef6220f2485882f refs/heads/main
+```
+
+功能提交后工作区干净。此后只补交付回执文档，另作一个 Conventional Commit 并推送；最终快照 SHA 在交付答复中固定，不把本页的自身哈希写入自身。

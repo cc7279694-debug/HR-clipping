@@ -92,7 +92,9 @@ python -X utf8 -m unittest discover -s tests -p "test_*.py" -v
 
 - 分支：`codex/xiaoyang-vlog-v1`（按附件要求保留分支名，Skill 标识仍只有 `hr-clipping`）。
 - 基线：`a633ebc3fd6409c71d5fccd65ef6220f2485882f`，默认分支 main。
-- 仅逐项暂存本模块文件；提交使用 Conventional Commits。交付提交 SHA、推送回执与本页固定提交链接随最终答复提供。
+- 功能提交：`099a4a482c0a012afeaba01ee372d8ba7277fc18`，`feat(skills): integrate hr-clipping vlog v1`；已推送，远端分支 SHA 与本地一致。
+- 实际暂存及功能提交树共 25 份文本，内容/敏感信息检查通过；工作区与功能提交一致。随后仅补本报告、状态、计划及验证收据的交付回执。
+- 最终交付快照包含功能提交及回执提交；最终 SHA 与本页固定提交链接随交付答复提供。没有自行创建或合并 PR。
 - 不合并 main、不强推、不改其他仓库或既有剪辑工程。
 
 ## 7. 下一步与停止点
